@@ -1,4 +1,3 @@
-
 services:
 
   movies:
@@ -46,6 +45,8 @@ services:
     depends_on:
       mongodb:
         condition: service_healthy
+    volumes:
+      - data
 
   mongodb:
     image: docker.io/bitnami/mongodb:5.0
